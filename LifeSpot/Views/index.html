@@ -1,10 +1,65 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>LifeSpot</title>
+    <title>LifeSpot - Онлайн-трансляции</title>
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Свойства стиля элемента. */
+        .block {
+            border: 2px solid black;
+            background-color:azure;
+            padding: 10px;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
-    <p>Приветствуем на LifeSpot!</p>
+    <!-- Хедер страницы -->
+    <header id="header-index">
+        <!--Заголовок страницы-->
+        <h1>LifeSpot - прямые трансляции с улиц</h1>
+        <!--Параграф-->
+        <div class="bordered">
+            <p>Покажем, что происходит прямо сейчас</p>
+        </div>        <!-- Поле для поиска -->
+        <input type="text" id="search" placeholder="Поиск видео...">
+    </header>
+<!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
+    <aside id="sidebar">
+        <div class="navbar">
+            <a href="/"><p>Все трансляции</p></a>
+            <a href="/"><p>О проекте</p></a>
+        </div>
+    </aside>
+    <!-- Контейнер с видео -->
+    <div class="video-container">
+        <figure>
+            <!-- Russia -->
+            <iframe src="https://www.youtube.com/embed/h1wly909BYw" allowfullscreen></iframe>
+            <figcaption>Russia - St. Petersburg</figcaption>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=h1wly909BYw'">Смотреть на YouTube</button>
+        </figure>
+        <figure>
+            <!-- Italy -->
+            <iframe src="https://www.youtube.com/embed/K_Vg94nBiaY" allowfullscreen></iframe>
+            <figcaption>Italy - Venice</figcaption>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=K_Vg94nBiaY'">Смотреть на YouTube</button>
+        </figure>
+        <figure>
+            <!-- Namibia -->
+            <iframe src="https://www.youtube.com/embed/ydYDqZQpim8" allowfullscreen></iframe>
+            <figcaption>Namibia - Desert</figcaption>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=ydYDqZQpim8'">Смотреть на YouTube</button>
+        </figure>
+    </div>
+    <!-- Футер страницы -->
+    <footer>
+        <p>LifeSpot - все права защищены</p>
+        <p>Связаться с нами: contact@lifespot.ru</p>
+    </footer>
 </body>
 </html>
