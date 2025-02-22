@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>LifeSpot - Онлайн-трансляции</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script src="../Static/JS/index.js"></script>
     <style>
         /* Свойства стиля элемента. */
         .block {
@@ -25,16 +26,23 @@
         <!--Параграф-->
         <div class="bordered">
             <p>Покажем, что происходит прямо сейчас</p>
-        </div>        <!-- Поле для поиска -->
-        <input type="text" id="search" placeholder="Поиск видео...">
+        </div>        
+        <!-- Поле для поиска -->
+        <input type="text" id="search" placeholder="Поиск видео..." oninput="
+        let inputString = document.getElementById('search').value.toLowerCase();
+        let figures = document.querySelectorAll('.video-container figure');
+        figures.forEach(figure => {
+            let videoText = figure.querySelector('figcaption').innerText.toLowerCase();
+            if (!videoText.includes(inputString)) {
+                figure.style.display = 'none';
+            } else {
+                figure.style.display = 'inline-block';
+            }
+        });
+    ">    
     </header>
-<!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
-    <aside id="sidebar">
-        <div class="navbar">
-            <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p></a>
-        </div>
-    </aside>
+    <!-- Сайд-бар страницы -->
+    <!--SIDEBAR-->
     <!-- Контейнер с видео -->
     <div class="video-container">
         <figure>
@@ -57,9 +65,6 @@
         </figure>
     </div>
     <!-- Футер страницы -->
-    <footer>
-        <p>LifeSpot - все права защищены</p>
-        <p>Связаться с нами: contact@lifespot.ru</p>
-    </footer>
+    <!--FOOTER-->
 </body>
 </html>
