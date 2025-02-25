@@ -1,0 +1,127 @@
+/* Простые селекторы*/
+body, html {
+    height: 100%;
+    margin: 0;
+}
+/* Стили для всего документа */
+body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    background-color: linen;
+}
+/* Стили для заголовка */
+header {
+    color: black;
+    padding-left: 3%;
+}
+/* Стили для заголовка */
+#header-index{
+    color: #44453f;
+ }
+ /* Стили футера */
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    color: dimgrey;
+    line-height: 66%;
+    padding-left: 3%;
+}
+/* Стили для боковой панели */
+aside {
+    position: fixed;
+    font-size: large;
+    font-weight: bold;
+    height:100%; 
+    width:11%;
+    z-index:1;
+    top:0; 
+    left:0;
+    background-color:#111;
+    overflow-x:hidden;
+}
+/* Стили для контейнера видео */
+.video-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0.7%;
+}
+/* Стили для контейнера видео */
+.video-container figure {
+    text-align: left;
+}
+/* Стили для iframe */
+.video-container iframe {
+    width: 400px;
+    height: 300px;
+}
+/* Стили для figcaption */
+.video-container figcaption {
+    margin-top: 5px;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+/* Стили для кнопки */
+.video-container button {
+    margin-top: 10px; /* Добавляем отступ сверху */
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+/* Стили для кнопки при наведении мышью */
+.video-container button:hover {
+    background-color: #fa0707;
+}
+/* Стили для панели навигации */
+.navbar {
+    color: darkgray;
+    padding-left: 15%;
+}
+ /* Стили панели навигации */
+ .navbar p{
+    color: darkgray;
+ }
+ /* Стили панели навигации при наведении мышью */
+ .navbar p:hover{
+    color: aliceblue;
+ }
+/* Стили ссылок в панели навигации */
+.navbar a {
+    display: block;
+    color: darkgray;
+    text-decoration: none;
+    text-align: left;
+    margin: 0;
+}
+/* Стили ссылок в панели навигации при наведении мышью */
+.navbar a:hover {
+    color: aliceblue;
+}
+/* Стили для всех элементов */
+header,body,footer,.video-container{
+    background-color: linen;
+ }
+/* Стили для поля поиска */
+#search {
+    width: 23.2%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Плавный переход для эффекта */
+}
+/* Стили для поля поиска при фокусе */
+#search:focus {
+    border-color: #44453f; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
