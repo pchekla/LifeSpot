@@ -3,13 +3,16 @@ body, html {
     height: 100%;
     margin: 0;
 }
+
 /* Стили для всего документа */
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Минимальная высота на весь экран */
     padding-left: 10%;
     background-color: linen;
 }
+
 /* Стили для заголовка */
 header {
     color: black;
@@ -21,12 +24,11 @@ header {
  }
  /* Стили футера */
 footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto; /* Отталкивает футер вниз */
+    text-align: left; /* Выравнивание по левому краю вместо центра */
+    padding: 10px 0 10px 3%; /* Верх, право, низ, лево - добавляем отступ слева */
     font-size: medium;
     color: dimgrey;
-    line-height: 66%;
-    padding-left: 3%;
 }
 /* Стили для боковой панели */
 aside {
@@ -125,3 +127,42 @@ header,body,footer,.video-container{
     border-color: #44453f; /* Цвет рамки при фокусе */
     outline: none; /* Убираем стандартное выделение */
 }
+
+.review-container,.review-button{
+    display: block; /* Чтобы элементы шли друг под другом */
+    margin-left: 2%; /* Отступ от боковой панели */
+    padding-left: 0; /* Убираем padding, чтобы не было смещения внутри */
+ }
+  
+ .review-text{
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 2%;
+    padding-top: 1%;
+ }
+ 
+ /* Стили для контейнера отзывов */
+ .reviews {
+    display: flex;
+    flex-direction: column; /* Элементы идут в столбик */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    margin-left: 1%;
+ }
+
+ /* Стили для кнопки отзыва */
+ .review-button button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+ }
+
+ /* Стили для кнопки отзыва при наведении */
+ .review-button button:hover {
+    background-color: #fa0707;
+ }
+ 

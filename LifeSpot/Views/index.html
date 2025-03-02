@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>LifeSpot - Онлайн-трансляции</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
-    <script src="../Static/JS/index.js"></script>
+   <!-- Внешний скрипт с функциями -->
+   <script type="text/javascript" src="../Static/JS/index.js"></script>
+<!-- Внутренний скрипт с вызовами функций -->
+    <script>
+        // Проверка на возраст
+        checkAge();
+        
+        // сохранение сессии
+        handleSession();
+        
+        // вывод данных сессии в консоль
+        sessionLog();
+    </script>
     <style>
         /* Свойства стиля элемента. */
         .block {
@@ -28,18 +40,7 @@
             <p>Покажем, что происходит прямо сейчас</p>
         </div>        
         <!-- Поле для поиска -->
-        <input type="text" id="search" placeholder="Поиск видео..." oninput="
-        let inputString = document.getElementById('search').value.toLowerCase();
-        let figures = document.querySelectorAll('.video-container figure');
-        figures.forEach(figure => {
-            let videoText = figure.querySelector('figcaption').innerText.toLowerCase();
-            if (!videoText.includes(inputString)) {
-                figure.style.display = 'none';
-            } else {
-                figure.style.display = 'inline-block';
-            }
-        });
-    ">    
+        <input type="text" id="search" placeholder="Поиск видео..." oninput="filterContent()"> 
     </header>
     <!-- Сайд-бар страницы -->
     <!--SIDEBAR-->
