@@ -31,7 +31,7 @@ namespace LifeSpot
         /// </summary>
         public static void MapJs(this IEndpointRouteBuilder builder)
         {
-            var jsFiles = new[] { "index.js", "about.js", "testing.js" };
+            var jsFiles = new[] { "index.js", "about.js", "testing.js", "slider.js" };
             
             foreach (var fileName in jsFiles)
             {

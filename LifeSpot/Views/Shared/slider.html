@@ -1,13 +1,35 @@
 <div class="slider-container">
     <h2>Галерея изображений</h2>
-    <div class="slider-images">
-        <div class="slider-image">
-            <img src="/img/1.jpg" alt="Изображение 1">
-            <p>LIFE</p>
+    <div class="slider-wrapper">
+        <button class="slider-arrow prev-arrow">&lt;</button>
+        <div class="slider-images">
+            <div class="slider-image active" data-index="0">
+                <img src="/img/1.jpg" alt="Изображение 1">
+                <p>LIFE</p>
+                <div class="fullscreen-btn">
+                    <i class="fullscreen-icon">⛶</i>
+                </div>
+            </div>
+            <div class="slider-image" data-index="1">
+                <img src="/img/2.png" alt="Изображение 2">
+                <p>SPOT</p>
+                <div class="fullscreen-btn">
+                    <i class="fullscreen-icon">⛶</i>
+                </div>
+            </div>
         </div>
-        <div class="slider-image">
-            <img src="/img/2.png" alt="Изображение 2">
-            <p>SPOT</p>
+        <button class="slider-arrow next-arrow">&gt;</button>
+    </div>
+</div>
+
+<!-- Полноэкранный режим просмотра -->
+<div id="fullscreen-container" class="fullscreen-container">
+    <div class="fullscreen-content">
+        <button class="fullscreen-close">&times;</button>
+        <button class="fullscreen-arrow fullscreen-prev">&lt;</button>
+        <div class="fullscreen-image-container">
+            <img id="fullscreen-image" src="" alt="Полноэкранное изображение">
         </div>
+        <button class="fullscreen-arrow fullscreen-next">&gt;</button>
     </div>
 </div>
