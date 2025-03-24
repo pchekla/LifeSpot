@@ -130,18 +130,23 @@ header,body,footer,.video-container{
 
 .review-container,.review-button{
     display: block; /* Чтобы элементы шли друг под другом */
-    margin-left: 2%; /* Отступ от боковой панели */
+    width: 100%; /* Растягиваем на всю ширину */
     padding-left: 0%; /* Убираем padding, чтобы не было смещения внутри */
+    box-sizing: border-box;
+    margin-left: 3.5%; /* Убираем отступ слева полностью */
+    padding-right: 10%; /* Добавляем отступ справа, чтобы соответствовать ширине контейнера изображений */
  }
   
  .review-text {
     display: block;
     margin-left: 0;
-    padding-left: 0; /* Убираем padding, чтобы не было смещения внутри */
+    padding: 10px; /* Добавляем padding со всех сторон */
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5); /* Легкий фон для отзывов */
     margin-bottom: 10px; /* Отступ между отзывами */
-    width: 80%; /* Ограничиваем ширину */
+    width: 100%; /* Растягиваем на всю ширину */
+    box-sizing: border-box;
+    margin-left: 3.5%; /* Увеличиваем отступ слева, чтобы соответствовать кнопке */
  }
  
  /* Стили для контейнера отзывов */
@@ -149,8 +154,11 @@ header,body,footer,.video-container{
     display: flex;
     flex-direction: column; /* Элементы идут в столбик */
     align-items: flex-start; /* Выравнивание по левому краю */
-    margin-left: 1%; /* Увеличиваем отступ слева, чтобы соответствовать кнопке */
+    margin-left: 0; /* Убираем отступ слева полностью */
+    width: 100%; /* Растягиваем на всю ширину */
     margin-top: 20px; /* Добавляем отступ сверху для отделения от других элементов */
+    box-sizing: border-box;
+    padding-right: 10%; /* Добавляем отступ справа, чтобы соответствовать ширине контейнера изображений */
  }
 
  /* Стили для кнопки отзыва */
@@ -173,61 +181,85 @@ header,body,footer,.video-container{
 .review-text-container {
     display: flex;
     flex-direction: column; /* Элементы идут в столбик */
-    align-items: flex-start; /* Выравнивание по левому краю */
-    margin-left: 3%;
+    width: 100%; /* Растягиваем на всю ширину */
     margin-top: 10px;
+    box-sizing: border-box;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    margin-left: 0; /* Убираем отступ слева полностью */
+    padding-right: 10%; /* Добавляем отступ справа, чтобы соответствовать ширине контейнера изображений */
 }
 
 /* Стили для текста отзыва */
 .review-text {
     display: block;
-    margin-left: 0;
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-bottom: 10px;
-    width: 80%;
+    width: 100%; /* Растягиваем на всю ширину */
+    box-sizing: border-box;
 }
 
 /* Стили для слайдера */
 .slider-container {
     margin: 20px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slider-container h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #333;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .slider-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .slider-image {
     text-align: center;
-    max-width: 300px;
+    max-width: 350px;
     background-color: white;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.slider-image:hover {
+    transform: translateY(-5px);
 }
 
 .slider-image img {
-    max-width: 100%;
-    height: auto;
+    width: 320px;
+    height: 240px;
+    object-fit: cover;
     border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .slider-image p {
     margin-top: 8px;
     font-weight: bold;
-    color: #333;
+    color: white;
+    background-color: #fa0707;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-image p:hover {
+    background-color: #d40606;
 }
  
