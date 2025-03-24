@@ -48,7 +48,7 @@ aside {
     flex: 1;
     display: flex;
     align-items: flex-start;
-    padding-left: 0.7%;
+    padding-left: 0.1%;
 }
 /* Стили для контейнера видео */
 .video-container figure {
@@ -131,14 +131,17 @@ header,body,footer,.video-container{
 .review-container,.review-button{
     display: block; /* Чтобы элементы шли друг под другом */
     margin-left: 2%; /* Отступ от боковой панели */
-    padding-left: 0; /* Убираем padding, чтобы не было смещения внутри */
+    padding-left: 0%; /* Убираем padding, чтобы не было смещения внутри */
  }
   
- .review-text{
+ .review-text {
     display: block;
-    margin-top: 0.5em;
-    padding-left: 2%;
-    padding-top: 1%;
+    margin-left: 0;
+    padding-left: 0; /* Убираем padding, чтобы не было смещения внутри */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Легкий фон для отзывов */
+    margin-bottom: 10px; /* Отступ между отзывами */
+    width: 80%; /* Ограничиваем ширину */
  }
  
  /* Стили для контейнера отзывов */
@@ -146,7 +149,8 @@ header,body,footer,.video-container{
     display: flex;
     flex-direction: column; /* Элементы идут в столбик */
     align-items: flex-start; /* Выравнивание по левому краю */
-    margin-left: 1%;
+    margin-left: 1%; /* Увеличиваем отступ слева, чтобы соответствовать кнопке */
+    margin-top: 20px; /* Добавляем отступ сверху для отделения от других элементов */
  }
 
  /* Стили для кнопки отзыва */
@@ -165,4 +169,67 @@ header,body,footer,.video-container{
  .review-button button:hover {
     background-color: #fa0707;
  }
+
+.review-text-container {
+    display: flex;
+    flex-direction: column; /* Элементы идут в столбик */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    margin-left: 10%; /* Отступ слева, чтобы соответствовать кнопке */
+    margin-top: 20px; /* Отступ сверху для отделения от других элементов */
+}
+
+/* Стили для текста отзыва */
+.review-text {
+    display: block;
+    margin-left: 0;
+    padding-left: 0; /* Убираем padding, чтобы не было смещения внутри */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Легкий фон для отзывов */
+    margin-bottom: 10px; /* Отступ между отзывами */
+    width: 80%; /* Ограничиваем ширину */
+}
+
+/* Стили для контейнера кнопки */
+.review-button-container {
+    margin-left: 10%; /* Отступ от левого края */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Стили для самой кнопки */
+.review-button-container button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Стили для кнопки при наведении */
+.review-button-container button:hover {
+    background-color: #fa0707;
+}
+
+/* Контейнер для текстов отзывов */
+.review-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+/* Стили для текста отзыва */
+.review-text {
+    display: block;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    width: 80%;
+}
  

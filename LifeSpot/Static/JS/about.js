@@ -55,19 +55,21 @@ function addComment() {
  *
  * */
 const writeReview = review => {
-	let likeCounter = '';
+    let likeCounter = '';
 
-	// Если публикуется отзыв - добавляем ему кнопку с лайками.
-	if (review.hasOwnProperty('rate')) {
-
-		// Генерим идентификатор комментария.
-		let commentId = Math.random();
-		// Для кнопки лайков добавляем: идентификатор, атрибут onclick для передачи идентификатора в функцию, значок лайка, и само значение счётчика отделяем пробелом
-		// Также мы добавили стиль, чтобы кнопка смотрелась лучше и не имела рамок
-		likeCounter += '<button id="' + commentId + '" style="border: none" onclick="addLike(this.id)">' + `❤️ ${review.rate}</button>`
-	}
-	// Запишем результат 
-	document.getElementsByClassName('reviews')[0].innerHTML += ' <div class="review-    text">\n' + `<p> <i> <b>${review['author']}</b> ${review['date']}${likeCounter}</i></p>` + `<p>${review['text']}</p>` + '</div>';
+    // Если публикуется отзыв - добавляем ему кнопку с лайками.
+    if (review.hasOwnProperty('rate')) {
+        // Генерим идентификатор комментария.
+        let commentId = Math.random();
+        // Для кнопки лайков добавляем: идентификатор, атрибут onclick, значок лайка и счетчик
+        likeCounter += '<button id="' + commentId + '" style="border: none" onclick="addLike(this.id)">' + `❤️ ${review.rate}</button>`;
+    }
+    
+    // Запишем результат в контейнер для отзывов
+    document.querySelector('.review-text-container').innerHTML += '<div class="review-text">' + 
+        `<p><i><b>${review.author}</b> ${review.date}${likeCounter}</i></p>` + 
+        `<p>${review.text}</p>` + 
+        '</div>';
 }
 
 /*
