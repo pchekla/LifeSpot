@@ -24,13 +24,8 @@ namespace LifeSpot
            string footerHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "footer.html"));
            string sideBarHtml =  File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "sideBar.html"));
  
-           app.UseEndpoints(endpoints =>
-           {
-               // Маппинг статических файлов
-               endpoints.MapCss();
-               endpoints.MapJs();
-               endpoints.MapHtml();
-           });
+           // Используем настройку из EndpointMapper.cs
+           EndpointMapper.Configure(app);
        }
    }
 }
